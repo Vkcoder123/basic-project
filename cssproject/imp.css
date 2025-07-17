@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+#progress {
+    height: 30px;
+    width: 400px;
+    border-radius: 15px;
+    border: 1px solid white;
+    position: relative;
+}
+
+#progress::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 30px;
+    width: 0px;
+    border-radius: 15px;
+    background: linear-gradient(to right, orange, white, green);
+    animation: progress 5s ease-in-out infinite;
+}
+
+@keyframes progress {
+    to {
+        width: 400px;
+    }
+}
